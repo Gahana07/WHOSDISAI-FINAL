@@ -1,5 +1,4 @@
 streamlit
-torch
-torchvision
-Pillow
+tensorflow-cpu==2.9.3
 numpy
+Pillow
