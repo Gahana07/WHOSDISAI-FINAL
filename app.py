@@ -4,7 +4,8 @@ from PIL import Image
 import tensorflow as tf
 
 # Load TensorFlow model
-model = tf.keras.models.load_model("deepfake_mobilenet.h5")
+model = tf.keras.models.load_model("deepfake_mobilenet.h5", compile=False)
+
 
 st.title("Deepfake Detector 🔍")
 
@@ -23,3 +24,4 @@ if uploaded:
         st.error(f"⚠️ FAKE — Score: {pred:.2f}")
     else:
         st.success(f"✅ REAL — Score: {1 - pred:.2f}")
+
